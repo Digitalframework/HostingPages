@@ -1,4 +1,4 @@
-'use client';
+
 import styles from './Home.module.css'
 import Navbar from '../../components/navbar/Navbar';
 import Form from '../../components/form/MainForm';
