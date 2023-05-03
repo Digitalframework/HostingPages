@@ -1,7 +1,7 @@
 import styles from './Navbar.module.css'
 import { useState } from 'react';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
-
+import Link from 'next/link'
 
 export default function Navbar() {
     
@@ -1168,10 +1168,10 @@ c12 -49 -79 -253 -148 -332 -23 -26 -38 -34 -57 -32 -24 3 -26 7 -25 49 0 35
                 </button>
                 <div className={styles.navlist} style={{display: hamburgerOpen || width >= 805 ? 'flex' : 'none'}}>
                     <ul>
-                        <li ><a href="/layout">Home</a></li>
-                        <li ><a href="/projects">Projekte</a></li>
-                        <li ><a href="/aboutUs">ÜberUns</a></li>
-                        <li><a href="#">Kontakt</a></li>
+                        <li ><Link href="/layout">Home</Link></li>
+                        <li ><Link href="/projects">Projekte</Link></li>
+                        <li ><Link href="/aboutUs">ÜberUns</Link></li>
+                        <li><Link href="#">Kontakt</Link></li>
 
                     </ul>
                 </div>
