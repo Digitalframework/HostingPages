@@ -1,0 +1,259 @@
+
+.picturecarousel {
+    display:flex;
+    position: relative;
+    width: 100%;
+}
+.picturecarousel>img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	animation: animate 15s infinite;
+	opacity: 0;
+	background-position: center center;
+    object-fit: cover;
+}
+.picturecarousel>img:nth-child(2) {
+	animation-delay: 4s;
+}
+.picturecarousel>img:nth-child(3) {
+	animation-delay: 8s;
+}
+.picturecarousel>img:nth-child(4) {
+	animation-delay: 12s;
+}
+
+
+@keyframes animate {
+	10% {
+		opacity: 1;
+	}
+	20% {
+		opacity: 1;
+	}
+	30% {
+		opacity: 0;
+	}
+}
+.h1carousel {
+    font-size: 35px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #FBFBFB ;
+    width: 80%;
+    position: absolute;
+
+}
+
+.hrcarousel {
+    width: 100%;
+    color: #FBFBFB ;
+    position: absolute;
+    justify-content: center;
+}
+
+.pcarousel {
+    font-family: sans-serif;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 25px;
+    color: #FBFBFB ;
+    width: 100%;
+    position: absolute;
+    justify-content: center;
+
+
+  }
+
+.buttonwrapper {
+    font-family: sans-serif;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+  }
+  
+.btn{
+  padding: 15px 100px;
+  margin:10px 4px;
+  color: #FBFBFB ;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  display:inline-block;
+  
+}
+
+.btn{
+  border:1px solid transparent; 
+   -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+  transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+  border-left:4px solid #6098FF;
+
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom:0px;
+  z-index:-1;
+  width: 0%;
+  height:1px;
+  box-shadow: inset 0px 0px 0px #6098FF;
+  display: block;
+  -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+  transition: all 0.4s cubic-bezier(.5, .24, 0, 1)
+}
+
+.btn:hover::before {
+  width:100%;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  right: 0px;
+  top:0px;
+  z-index:-1;
+  width: 0%;
+  height:1px;
+  background: #6098FF;
+  -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+  transition: all 0.4s cubic-bezier(.5, .24, 0, 1)
+}
+.btn:hover::after {
+  width:100%;
+}
+.btn:hover{
+  border-left:1px solid #6098FF;
+  border-right:1px solid #6098FF;
+}
+
+.layoutcontainer{
+    display:flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background: #1D1D1D;
+
+}
+
+.layoutpicture{
+    height:80vh;
+
+}
+.infotext{
+    margin-top: 20%;
+    flex-flow: column wrap;
+    font-family: sans-serif;
+    line-height: 1.5;
+    font-size: 25px;
+    background: #1D1D1D;
+    color: #FBFBFB ;
+    width: 55%;
+    margin: auto;
+}
+
+.verticalbar {
+    height: 240px;
+    position: absolute;
+    margin-left: 50%;
+    transform: translateY(-12vh);
+}
+.formcontainer{
+    width: 100%;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.contactcontainer{
+    background: #1A1F23;
+    width: 100%;
+    height: 660px;
+}
+
+.tilecontainer{
+    width:100%;
+    height: 660px;
+    background:#1A1F23;
+    background-image: url("https://github.com/Digitalframework/FullStackWebApp/blob/main/webcomponents/src/picture/WoodenTrunkPage.png?raw=true");
+    background-repeat: no-repeat;   
+    background-position-x:-25.5rem
+}
+
+.productinfo{
+    margin-left: 30%;
+    width: 68%;
+    height: 576px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    background:#6E6658;
+    
+}
+
+.backgroundcontainer{
+    float: left;
+    height: 660px;
+}
+
+
+.hr {
+    width: 80%;
+    color: #FBFBFB ;
+}
+.h2 {
+    margin-top: 2%;
+    color: #FBFBFB ;
+}
+
+.h3 {
+    margin-top: 2%;
+    color: #FBFBFB ;
+}
+@media screen and (max-width: 1245px) {
+
+    .infotext{
+        margin-left: 25%;
+        margin-right: 25%;
+        width: 50%;
+    }    
+    .tilecontainer{
+        height: 330px;
+    }
+    .productinfo{
+
+        height: 302px;
+
+    }
+    
+    .backgroundcontainer{
+
+        height: 330px;
+
+    }    
+
+}
+@media screen and (max-width: 805px) {
+    .infotext{
+        font-size: 16px;
+    }
+    .refbutton{
+        font-size: 16px;
+    }
+    .formcontainer{
+        margin: auto;
+    }
+    .layoutpicture{
+        height:40vh;
+    
+    }
+    .pcarousel {
+        font-size: 16px;
+    }
+    .h1carousel {
+        font-size: 18px;
+    }
+
+}
