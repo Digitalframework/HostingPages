@@ -3,6 +3,10 @@ import styles from './Home.module.css'
 import Navbar from '../../components/navbar/Navbar';
 import Form from '../../components/form/MainForm';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
+import Image from 'next/image'
+import carpenterPicCar from '../picture/pexels-bryan-catota-3680454.jpg'
+import carpenterPicWes from '../picture/pexels-thijs-van-der-weide-1094767.jpg'
+import Footer from '../../components/footer/Footer';
 export default function Home() {
 
     const {height,width} = useWindowDimensions();
@@ -10,12 +14,9 @@ export default function Home() {
     return (
         <div className={styles.pagewrapper}>
             <Navbar></Navbar>
-
                 <div className={styles.picturecarousel} style={{height:width >= 1245 ? 0.85*height:0.4*height}}>
-		            <img src="https://images.pexels.com/photos/1094767/pexels-photo-1094767.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""/>
-                    <img src="https://images.pexels.com/photos/3680454/pexels-photo-3680454.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""/>
-                    <img src="https://images.pexels.com/photos/13176371/pexels-photo-13176371.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""/>
-                    <img src="https://images.pexels.com/photos/5089149/pexels-photo-5089149.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""/>
+		            <Image src={carpenterPicCar} alt=""/>
+                    <Image src={carpenterPicCar} alt=""/>
                     <h1 className={styles.h1carousel} style={{transform: width >= 1245 ? `translateY(${height}%)` : `translateY(${0.15*height}%)`}}>Ein leben lang gibt es nur eine Wahl</h1>
                         <p className={styles.pcarousel} style={{transform: width >= 1245 ? `translateY(${1.4*height}%)` : `translateY(${0.2*height}%)`}}>
                         Wir führen unsere Projekte für große Unternehmen sowie wie private Kunden sorgfaltig und schnell durch.
@@ -51,6 +52,7 @@ export default function Home() {
                 <div className={styles.formcontainer}>
                 <Form></Form>
                </div>
+               <Footer></Footer>
         </div>
     )
 
