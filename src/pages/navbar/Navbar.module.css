@@ -9,7 +9,6 @@
 }
 .logo {
   filter: invert(1);
-  margin: 1rem;
 }
 
 
@@ -26,6 +25,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: #000000;
+  height:'15svh';
 }
 .navlist li:nth-child(-n+4){
     translate: -80%;
@@ -46,6 +46,12 @@
   color: white;
 }
 
+:root{
+  --bar-width: 60px;
+  --bar-height: 8px;
+  --hamburger-gap: 6px;
+}
+
 .togglebutton{
   position: absolute;
   display: none;
@@ -64,7 +70,6 @@
   background-color: white;
   border-radius: 10px;
 }
-
 
 @media screen and (max-width: 805px) {
   .togglebutton {
