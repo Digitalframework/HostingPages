@@ -8,6 +8,7 @@
   
 }
 .logo {
+  margin: 0;
   filter: invert(1);
 }
 
@@ -54,14 +55,16 @@
 }
 
 .hamburgermenu{
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: var(--hamburger-gap);
   width: max-content;
   position: absolute;
-  top: 45px;
-  right: 15px;
+  top: 5svh;
+  right: 5%;
   z-index: 2;
+  justify-content: center;
+  align-items: center;
 }
 
 .hamburgermenu input {
@@ -92,10 +95,14 @@
 
 @media screen and (max-width: 805px) {
 
+  .hamburgermenu{
+    display: flex;
+  }
 
   .hamburgermenu:has(input:checked) + .navlist ul{
     display: flex;
-  }  
+  }
+  
 
   .navlist{
     position: relative;

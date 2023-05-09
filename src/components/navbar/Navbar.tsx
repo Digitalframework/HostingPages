@@ -1,16 +1,8 @@
 import styles from './Navbar.module.css'
-import { useState } from 'react';
-import useWindowDimensions from '../../hooks/useWindowDimensions';
 import Link from 'next/link'
 
 export default function Navbar() {
     
-    const [hamburgerOpen, setHamburgerOpen] = useState(false)
-    const {height,width} = useWindowDimensions();
-
-    const toggleHamburger = () => {
-        setHamburgerOpen(!hamburgerOpen)
-    }
 
     return (
     <div className={styles.wrapper}>  
@@ -18,7 +10,7 @@ export default function Navbar() {
             <nav className={styles.navbar} style={{height:'15svh'}}>
                 <div className={styles.logo}>
                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width={'15svh'}  height={'15svh'} viewBox="0 0 1000.000000 1000.000000"
+ width={'15svh'}  height={'15svh'}  viewBox="0 0 1000.000000 1000.000000"
  preserveAspectRatio="xMidYMid meet">
 
 <g transform="translate(0.000000,1000.000000) scale(0.100000,-0.100000)"
@@ -1155,14 +1147,12 @@ c12 -49 -79 -253 -148 -332 -23 -26 -38 -34 -57 -32 -24 3 -26 7 -25 49 0 35
 -12 -127 -30 -165 -81 -169 -34 -3 -35 -2 -32 30 22 240 35 374 39 380 10 16
 44 7 58 -14z"/>
 </g>
-
-
                     <a href="#">
                     </a>
                     </svg>
                 </div>
                 <div className={styles.menue}>
-                    <label className={styles.hamburgermenu} style={{display: width >= 805 ? 'none' : 'flex'}}>
+                    <label className={styles.hamburgermenu}>
                         <input type='checkbox'/>
                     </label>   
  
