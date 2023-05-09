@@ -14,9 +14,11 @@ export default function Home() {
     return (
         <div className={styles.pagewrapper}>
             <Navbar></Navbar>
-                <div className={styles.picturecarousel} style={{height:width >= 1245 ? 0.85*height:0.4*height}}>
-		            <Image src={carpenterPicCar} alt=""/>
-                    <Image src={carpenterPicCar} alt=""/>
+                <div className={styles.picturecarousel} style={{height:width >= 1245 ? '85svh':'40svh'}}>
+		            <Image src={carpenterPicCar} alt="" />
+                    <Image src={carpenterPicWes} alt=""/>
+                    <Image src={carpenterPicCar} alt="" />
+                    <Image src={carpenterPicWes} alt=""/>
                     <h1 className={styles.h1carousel} style={{transform: width >= 1245 ? `translateY(${height}%)` : `translateY(${0.15*height}%)`}}>Ein leben lang gibt es nur eine Wahl</h1>
                         <p className={styles.pcarousel} style={{transform: width >= 1245 ? `translateY(${1.4*height}%)` : `translateY(${0.2*height}%)`}}>
                         Wir führen unsere Projekte für große Unternehmen sowie wie private Kunden sorgfaltig und schnell durch.

@@ -15,10 +15,10 @@ export default function Navbar() {
     return (
     <div className={styles.wrapper}>  
         <header>
-            <nav className={styles.navbar} style={{height:0.15*height}}>
+            <nav className={styles.navbar} style={{height:'15svh'}}>
                 <div className={styles.logo}>
                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width={0.15*height}  height={0.15*height} viewBox="0 0 1000.000000 1000.000000"
+ width={'15svh'}  height={'15svh'} viewBox="0 0 1000.000000 1000.000000"
  preserveAspectRatio="xMidYMid meet">
 
 <g transform="translate(0.000000,1000.000000) scale(0.100000,-0.100000)"
@@ -1161,19 +1161,20 @@ c12 -49 -79 -253 -148 -332 -23 -26 -38 -34 -57 -32 -24 3 -26 7 -25 49 0 35
                     </a>
                     </svg>
                 </div>
-                <button className={styles.togglebutton} onClick={toggleHamburger}>
-                    <span className={styles.bar}></span>
-                    <span className={styles.bar}></span>
-                    <span className={styles.bar}></span>
-                </button>
-                <div className={styles.navlist} style={{display: hamburgerOpen || width >= 805 ? 'flex' : 'none'}}>
-                    <ul>
-                        <li ><Link href="/layout">Home</Link></li>
-                        <li ><Link href="/projects">Projekte</Link></li>
-                        <li ><Link href="/aboutUs">ÜberUns</Link></li>
-                        <li><Link href="#">Kontakt</Link></li>
+                <div className={styles.menue}>
+                    <label className={styles.hamburgermenu} style={{display: width >= 805 ? 'none' : 'flex'}}>
+                        <input type='checkbox'/>
+                    </label>   
+ 
+                    <div className={styles.navlist} >
+                        <ul>
+                            <li ><Link href="/layout">Home</Link></li>
+                            <li ><Link href="/projects">Projekte</Link></li>
+                            <li ><Link href="/aboutUs">ÜberUns</Link></li>
+                            <li><Link href="#">Kontakt</Link></li>
 
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </header>
