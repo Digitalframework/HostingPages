@@ -19,10 +19,7 @@ import { useState } from 'react'
     updateFields,
   }: UserFormProps) {
 
-    const [firstname, setFirstName] = useState('');
-    const [lastname, setLastName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+
     
     return (
       <FormWrapper title="Kundeninfos">
