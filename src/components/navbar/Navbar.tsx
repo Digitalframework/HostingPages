@@ -1,13 +1,22 @@
 import styles from './Navbar.module.css'
 import Link from 'next/link'
 
-export default function Navbar() {
+type checkData ={
+    checked: boolean
+}
+
+type checkProps = checkData & {
+    updateFields: (fields: Partial<checkData>) => void
+  }
+
+export default function Navbar({
+    checked,
+  }: checkData) {
     
 
     return (
     <div className={styles.wrapper}>  
-        <header>
-            <nav className={styles.navbar} style={{height:'15svh'}}>
+            <nav className={styles.navbar}>
                 <div className={styles.logo}>
                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
  width={'15svh'}  height={'15svh'}  viewBox="0 0 1000.000000 1000.000000"
@@ -1151,12 +1160,14 @@ c12 -49 -79 -253 -148 -332 -23 -26 -38 -34 -57 -32 -24 3 -26 7 -25 49 0 35
                     </a>
                     </svg>
                 </div>
-                <div className={styles.menue}>
+                
                     <label className={styles.hamburgermenu}>
-                        <input type='checkbox'/>
+                        <input type='checkbox' onChange={e => { checked: e.target.checked }}/>
+
                     </label>   
  
                     <div className={styles.navlist} >
+                        
                         <ul>
                             <li ><Link href="/layout">Home</Link></li>
                             <li ><Link href="/projects">Projekte</Link></li>
@@ -1164,10 +1175,10 @@ c12 -49 -79 -253 -148 -332 -23 -26 -38 -34 -57 -32 -24 3 -26 7 -25 49 0 35
                             <li><Link href="#">Kontakt</Link></li>
 
                         </ul>
-                    </div>
-                </div>
+                        </div>
+                    
+                
             </nav>
-        </header>
     </div>      
     )
 }

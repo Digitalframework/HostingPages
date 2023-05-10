@@ -5,15 +5,18 @@ import Form from '../../components/form/MainForm';
 import Image from 'next/image'
 import carpenterPicCar from '../picture/pexels-bryan-catota-3680454.jpg'
 import carpenterPicWes from '../picture/pexels-thijs-van-der-weide-1094767.jpg'
+import Trunk from '../picture/WoodenTrunkPage.png';
 import Footer from '../../components/footer/Footer';
 export default function Home() {
 
 
     return (
         <div className={styles.pagewrapper}>
-            <Navbar></Navbar>
+            <Navbar checked={false} updateFields={function (fields: Partial<{ checked: boolean; }>): void {
+                throw new Error('Function not implemented.');
+            } }></Navbar>
                 <div className={styles.picturecarousel}>
-		            <Image src={carpenterPicCar} alt="" />
+		            <Image src={carpenterPicCar} alt=""/>
                     <Image src={carpenterPicWes} alt=""/>
                     <Image src={carpenterPicCar} alt="" />
                     <Image src={carpenterPicWes} alt="" />
@@ -42,8 +45,11 @@ export default function Home() {
                     
                     </div>
                 </div>
-                <div className={styles.tilecontainer}> 
-                    <div className={styles.backgroundcontainer} />
+                <div className={styles.tilecontainer}>
+                     
+                    <div className={styles.backgroundcontainer}>
+                    <Image src={Trunk} alt="" height={660} width={660} loading={'lazy'}/>
+                    </div>
                     <div className={styles.productinfo} />   
                 </div>
                 <div className={styles.contactcontainer}/>
