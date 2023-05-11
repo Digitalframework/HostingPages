@@ -63,7 +63,6 @@
     line-height: 1.5;
     font-size: 25px;
     color: #FBFBFB ;
-    width: 100%;
     position: absolute;
     transform: translateY(50svh);
     
@@ -172,6 +171,7 @@
     margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
+    
 }
 
 
@@ -234,6 +234,10 @@
         height: 302px;
 
     }
+    .buttonwrapper{
+        transform: translateY(25svh);
+        margin-left: 44%;
+    }
     
     .backgroundcontainer{
 
@@ -254,10 +258,7 @@
 }
 @media screen and (max-width: 805px) {
 
-    .buttonwrapper{
-        transform: translateY(25svh);
-        margin-left: 44%;
-    }
+    
 
     .btn{
         padding: 15px 50px;
@@ -270,6 +271,7 @@
     }
     .formcontainer{
         margin: auto;
+        
     }
     .layoutpicture{
         height:40vh;
@@ -291,13 +293,6 @@
         position: relative;
     }
     
-    .picturecarousel>img{
-        animation: none;
-        display: none;
-    }
-    .repostion{
-        height: 17svh;
-    }
 
 
 

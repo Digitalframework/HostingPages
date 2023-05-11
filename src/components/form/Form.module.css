@@ -168,10 +168,10 @@
   }
   
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 805px) {
 
 .msform {
-	width: 94%;
+	width: 90%;
 }
 
 }

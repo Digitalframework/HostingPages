@@ -6,6 +6,7 @@
 .wrapper{
   margin: 5 auto;
   
+  
 }
 .logo {
   margin: 0;
@@ -23,6 +24,7 @@
 
 
 .navbar {
+  z-index:2;
   position: relative;
   display: flex;
   align-items: center;
@@ -134,7 +136,7 @@
   }
 
   .navbar{
-    position: absolute;
+    position: fixed;
     flex-direction: column; 
   }
   
