@@ -1,7 +1,7 @@
 
 .picturecarousel {
     display:flex;
-    position: relative;
+    flex-wrap: wrap;
     width: 100%;
     height: 85svh;
 }
@@ -61,7 +61,6 @@
     color: #FBFBFB ;
     width: 100%;
     position: absolute;
-    justify-content: center;
     transform: translateY(50svh);
     
   }
@@ -69,8 +68,8 @@
 .buttonwrapper {
     font-family: sans-serif;
     text-align: center;
-    width: 100%;
     position: absolute;
+    margin-left: 20%;
     transform: translateY(70svh);
   }
   
@@ -268,16 +267,28 @@
     }
     .pcarousel {
         font-size: 16px;
+        margin-left: 10%;
     }
     .h1carousel {
+        
         font-size: 18px;
+        margin-left: 10%;
     }
     .verticalbar {
         display: none;
     }
-
+    .picturecarousel{
+        position: relative;
+    }
+    
     .picturecarousel>img{
         animation: none;
+        display: none;
     }
+    .repostion{
+        height: 17svh;
+    }
+
+
 
 }

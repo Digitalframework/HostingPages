@@ -9,8 +9,8 @@ export default function Navbar() {
 
     return (
     <div className={styles.wrapper}>  
-            <nav className={styles.navbar} style={{width: menue? '40svw':'100%',
-            height: menue? '100svh':'17svh',position: menue? 'absolute':'sticky'}}>
+            <nav className={styles.navbar} style={{width: menue? '40%':'100%',
+            height: menue? '100svh':'17svh'}}>
                 <div className={styles.logo}>
                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
  width={'15svh'}  height={'15svh'}  viewBox="0 0 1000.000000 1000.000000"
