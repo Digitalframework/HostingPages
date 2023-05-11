@@ -99,6 +99,7 @@
 
   .hamburgermenu:has(input:checked) + .navlist ul{
     display: flex;
+    flex-direction: column;
   }
 
 .hamburgermenu:has(input:checked) +  .navlist .navlistbackground{
@@ -132,10 +133,7 @@
   }
 
   .navbar{
-    position: fixed;
-    width: 40%;
-    flex-direction: column;
-    height: 100svh;
+    flex-direction: column; 
   }
   
 

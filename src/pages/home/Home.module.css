@@ -276,4 +276,8 @@
         display: none;
     }
 
+    .picturecarousel>img{
+        animation: none;
+    }
+
 }

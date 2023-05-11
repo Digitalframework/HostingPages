@@ -1,22 +1,16 @@
+import { useState } from 'react'
 import styles from './Navbar.module.css'
 import Link from 'next/link'
 
-type checkData ={
-    checked: boolean
-}
 
-type checkProps = checkData & {
-    updateFields: (fields: Partial<checkData>) => void
-  }
-
-export default function Navbar({
-    checked,
-  }: checkData) {
+export default function Navbar() {
     
+    const [menue, setMenue] = useState(false)
 
     return (
     <div className={styles.wrapper}>  
-            <nav className={styles.navbar}>
+            <nav className={styles.navbar} style={{width: menue? '40svw':'100%',
+            height: menue? '100svh':'17svh',position: menue? 'absolute':'sticky'}}>
                 <div className={styles.logo}>
                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
  width={'15svh'}  height={'15svh'}  viewBox="0 0 1000.000000 1000.000000"
@@ -1162,7 +1156,7 @@ c12 -49 -79 -253 -148 -332 -23 -26 -38 -34 -57 -32 -24 3 -26 7 -25 49 0 35
                 </div>
                 
                     <label className={styles.hamburgermenu}>
-                        <input type='checkbox' onChange={e => { checked: e.target.checked }}/>
+                        <input type='checkbox' onChange={e => { setMenue(e.target.checked) }}/>
 
                     </label>   
  

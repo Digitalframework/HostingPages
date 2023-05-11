@@ -12,9 +12,7 @@ export default function Home() {
 
     return (
         <div className={styles.pagewrapper}>
-            <Navbar checked={false} updateFields={function (fields: Partial<{ checked: boolean; }>): void {
-                throw new Error('Function not implemented.');
-            } }></Navbar>
+            <Navbar></Navbar>
                 <div className={styles.picturecarousel}>
 		            <Image src={carpenterPicCar} alt=""/>
                     <Image src={carpenterPicWes} alt=""/>
