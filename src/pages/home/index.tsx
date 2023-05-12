@@ -13,6 +13,7 @@ export default function Home() {
     return (
         <div className={styles.pagewrapper}>
             <Navbar></Navbar>
+            <div className={styles.reposition}></div>
             <div className={styles.picturecarousel}>
                 <Image src={carpenterPicCar} alt="" />
                 <Image src={carpenterPicWes} alt="" />
