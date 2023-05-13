@@ -159,19 +159,20 @@
 .textwrap{
     position: absolute;
     height: 50svh;
-    background:
-    linear-gradient(to right, rgb(0 0 0 / 0.5),rgb(0 0 0 / 0),
-    url("")); 
+
     
 }
 
 
 
-.infotext>img {
-    width: 304px;
-    height:473px;
+
+.textwrap>img {
+    position: absolute;
+    width: 100%;
+    height:100%;
     border-radius: 8px;
-    
+    mix-blend-mode: color-dodge;
+    filter: saturate(2);
 
 }
 
@@ -224,16 +225,17 @@
     float: left;
     height: 660px;
 }
-.hrtop {
+.textwrap hrtop {
     color: #FBFBFB ;
     margin-top: 15%;
 }
-.p {
+.textwrap p {
+    width: 80%;
     margin-top: 10%;
     margin-bottom: 10%;
 }
 
-.hr {
+.textwrap hr {
     width: 80%;
     color: #FBFBFB ;
 }

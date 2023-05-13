@@ -30,8 +30,9 @@ export default function Home() {
             </div>
             <div className={styles.layoutcontainer}>
                 <div className={styles.infotext}>
-                    <div className={styles.textwrap}>
                     
+                    <div className={styles.textwrap}>
+                        <Image src={Wood} alt="" />
                         <h2 className={styles.h2}>Unser Anspruch auf Detail
                         <hr className={styles.hrtop} />
                         </h2>
@@ -43,7 +44,9 @@ export default function Home() {
                         </p>
                         <hr className={styles.hr} />
                         <h3 className={styles.h3}>Treten sie mit dem Formular mit uns in Kontakt</h3>
+                        
                     </div>
+                    
                 </div>
                 <div className={styles.producttext}>
                     <h2 className={styles.h2}>Unsere Handwerkskunst
