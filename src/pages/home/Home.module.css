@@ -137,7 +137,7 @@
     flex-wrap: wrap;
     width: 100%;
     background: #1D1D1D;
-    height: 100svh;
+    height: 120svh;
 }
 
 .layoutpicture{
@@ -152,19 +152,15 @@
     font-size: 18px;
     background: #1D1D1D;
     color: #FBFBFB ;
-    width: 40%;
     
 }
 
 .textwrap{
-    position: absolute;
-    height: 50svh;
+    position: relative;
+    height: 70svh;
 
     
 }
-
-
-
 
 .textwrap>img {
     position: absolute;
@@ -228,24 +224,28 @@
 .textwrap hrtop {
     color: #FBFBFB ;
     margin-top: 15%;
+    margin-left: 10%;
 }
 .textwrap p {
     width: 80%;
     margin-top: 10%;
-    margin-bottom: 10%;
+    margin-left: 10%;
 }
 
 .textwrap hr {
+    margin-top: 5%;
     width: 80%;
     color: #FBFBFB ;
 }
-.h2 {
-    margin-top: 2%;
+.textwrap h2 {
+    margin-left: 10%;
+    transform: translateY(5svh);
     color: #FBFBFB ;
 }
 
-.h3 {
+.textwrap .h3 {
     margin-top: 2%;
+    margin-left: 10%;
     color: #FBFBFB ;
 }
 @media screen and (max-width: 1245px) {
