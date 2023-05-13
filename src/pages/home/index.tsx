@@ -5,6 +5,7 @@ import Form from '../../components/form/MainForm';
 import Image from 'next/image'
 import carpenterPicCar from '../picture/pexels-bryan-catota-3680454.jpg'
 import carpenterPicWes from '../picture/pexels-thijs-van-der-weide-1094767.jpg'
+import Wood from '../picture/pexels-alfo-medeiros-14569101.jpg';
 import Trunk from '../picture/WoodenTrunkPage.png';
 import Footer from '../../components/footer/Footer';
 export default function Home() {
@@ -29,17 +30,30 @@ export default function Home() {
             </div>
             <div className={styles.layoutcontainer}>
                 <div className={styles.infotext}>
-                    <h2 className={styles.h2}>Unser Anspruch auf Detail</h2>
+                    <div className={styles.textwrap}>
+                    
+                        <h2 className={styles.h2}>Unser Anspruch auf Detail
+                        <hr className={styles.hrtop} />
+                        </h2>
+                        
+                        <p className={styles.p}>
+                            Bei ABC Carpentry sind wir stolz darauf, bei jedem Projekt, dass wir durchführen, außergewöhnliche Handwerkskunst
+                            und hochwertigen Kundenservice zu bieten.
+
+                        </p>
+                        <hr className={styles.hr} />
+                        <h3 className={styles.h3}>Treten sie mit dem Formular mit uns in Kontakt</h3>
+                    </div>
+                </div>
+                <div className={styles.producttext}>
+                    <h2 className={styles.h2}>Unsere Handwerkskunst
+                    <hr className={styles.hrtop} />
+                    </h2>
+                    
                     <p className={styles.p}>
-                        Bei ABC Carpentry sind wir stolz darauf, bei jedem Projekt, dass wir durchführen, außergewöhnliche Handwerkskunst
-                        und hochwertigen Kundenservice zu bieten. Unser Team aus erfahrenen Schreinern ist auf eine breite Palette von Schreinerarbeiten
-                        spezialisiert.
-
+                    Unser Team aus erfahrenen Schreinern ist auf eine breite Palette von Schreinerarbeiten
+                    spezialisiert.
                     </p>
-                    <hr className={styles.hr} />
-                    <h3 className={styles.h3}>Treten sie mit dem Formular mit uns in Kontakt</h3>
-
-
                 </div>
             </div>
             <div className={styles.tilecontainer}>

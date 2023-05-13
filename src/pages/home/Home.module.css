@@ -1,4 +1,6 @@
-
+.pagewrapper{
+    font-family:Georgia, 'Times New Roman', Times, serif; 
+}
 
 .picturecarousel {
     display:flex;
@@ -41,13 +43,11 @@
 .h1carousel {
     z-index: -1;
     font-size: 35px;
-    font-family: sans-serif;
     text-align: center;
     color: #FBFBFB ;
     width: 80%;
     transform: translateY(30svh);
     position: absolute;
-
 }
 
 .hrcarousel {
@@ -59,18 +59,15 @@
 
 .pcarousel {
     z-index: -1;
-    font-family: sans-serif;
     text-align: center;
     line-height: 1.5;
     font-size: 25px;
     color: #FBFBFB ;
     position: absolute;
-    transform: translateY(50svh);
-    
+    transform: translateY(50svh); 
   }
 
 .buttonwrapper {
-    font-family: sans-serif;
     text-align: center;
     position: absolute;
     margin-left: 20%;
@@ -86,7 +83,6 @@
   position: relative;
   text-decoration: none;
   display:inline-block;
-  
 }
 
 .btn{
@@ -94,7 +90,6 @@
    -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
   transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
   border-left:4px solid #6098FF;
-
 }
 
 .btn::before {
@@ -128,6 +123,7 @@
   -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
   transition: all 0.4s cubic-bezier(.5, .24, 0, 1)
 }
+
 .btn:hover::after {
   width:100%;
 }
@@ -141,23 +137,53 @@
     flex-wrap: wrap;
     width: 100%;
     background: #1D1D1D;
-
+    height: 100svh;
 }
 
 .layoutpicture{
-    height:80vh;
+    height:100vh;
 
 }
 .infotext{
-    margin-top: 20%;
+    margin-top: 10%;
+    margin-left: 50%;
     flex-flow: column wrap;
-    font-family: sans-serif;
     line-height: 1.5;
-    font-size: 25px;
+    font-size: 18px;
     background: #1D1D1D;
     color: #FBFBFB ;
-    width: 55%;
-    margin: auto;
+    width: 40%;
+    
+}
+
+.textwrap{
+    position: absolute;
+    height: 50svh;
+    background:
+    linear-gradient(to right, rgb(0 0 0 / 0.5),rgb(0 0 0 / 0),
+    url("")); 
+    
+}
+
+
+
+.infotext>img {
+    width: 304px;
+    height:473px;
+    border-radius: 8px;
+    
+
+}
+
+.producttext{
+    margin-bottom: 10%;
+    margin-left: 5%;
+    flex-flow: column wrap;
+    line-height: 1.5;
+    font-size: 18px;
+    background: #1D1D1D;
+    color: #FBFBFB ;
+    width: 40%;
 }
 
 .verticalbar {
@@ -171,10 +197,8 @@
     width: 100%;
     margin-top: 5%;
     margin-left: auto;
-    margin-right: auto;
-    
+    margin-right: auto; 
 }
-
 
 .contactcontainer{
     background: #1A1F23;
@@ -193,15 +217,21 @@
     width: 68%;
     height: 576px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-    background:#6E6658;
-    
+    background:#6E6658;   
 }
 
 .backgroundcontainer{
     float: left;
     height: 660px;
 }
-
+.hrtop {
+    color: #FBFBFB ;
+    margin-top: 15%;
+}
+.p {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
 
 .hr {
     width: 80%;
@@ -220,13 +250,7 @@
 
     .picturecarousel{
         height: 40svh;
-    }
-
-    .infotext{
-        margin-left: 25%;
-        margin-right: 25%;
-        width: 50%;
-    }    
+    }  
     .tilecontainer{
         height: 330px;
     }
@@ -253,14 +277,9 @@
         transform: translateY(12svh);
     }
 
-    
-    
-
 }
 @media screen and (max-width: 805px) {
 
-    
-    
     .reposition{
         position: relative;
         height: 17svh;
@@ -299,8 +318,5 @@
     .picturecarousel{
         position: relative;
     }
-    
-
-
 
 }
