@@ -221,25 +221,23 @@
     float: left;
     height: 660px;
 }
-.textwrap hrtop {
-    color: #FBFBFB ;
-    margin-top: 15%;
-    margin-left: 10%;
-}
+
 .textwrap p {
     width: 80%;
-    margin-top: 10%;
+    margin-top: 15%;
     margin-left: 10%;
 }
 
 .textwrap hr {
-    margin-top: 5%;
+    margin-left: 10%;
+    margin-top: 10%;
     width: 80%;
     color: #FBFBFB ;
 }
 .textwrap h2 {
     margin-left: 10%;
-    transform: translateY(5svh);
+    transform: translateY(4svh);
+    width: 50%;
     color: #FBFBFB ;
 }
 
@@ -281,6 +279,10 @@
 
 }
 @media screen and (max-width: 805px) {
+
+    .textwrap h2 {
+        font-size: 16px;
+    }
 
     .reposition{
         position: relative;
