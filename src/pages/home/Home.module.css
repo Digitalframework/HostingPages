@@ -137,7 +137,7 @@
     flex-wrap: wrap;
     width: 100%;
     background: #1D1D1D;
-    height: 120svh;
+    height: 220svh;
 }
 
 .layoutpicture{
@@ -145,30 +145,63 @@
 
 }
 .infotext{
-    margin-top: 10%;
-    margin-left: 50%;
+    display: flex;
+    justify-content: space-between;
     flex-flow: column wrap;
     line-height: 1.5;
     font-size: 18px;
     background: #1D1D1D;
     color: #FBFBFB ;
+    height: 70svh;
+    
+}
+.textparent{
+    width: 100%;
+}
+
+.textwrapper{
+    float: left;
+    border-style: dashed;
+    position: relative;
+    height: 70svh;
+    width: 55%;
+}
+
+
+.textwrapper img:nth-of-type(1) {
+    position: absolute;
+    width: 70%;
+    height:100%;
+    transform: translateX(43%);
+    object-fit: fill;
     
 }
 
-.textwrap{
+.textwrapper img:nth-of-type(2) {
     position: relative;
-    height: 70svh;
+    width: 100%;
+    height:40svh;
+    transform: translateY(30vh);
+    object-fit: fill;
+}
 
-    
+.textwrap{
+    margin-left: 15%;
+    border-style: dashed;
+    width: 50%;
+    position: relative;
+    height: 60svh;
 }
 
 .textwrap>img {
     position: absolute;
-    width: 100%;
+    width: 60%;
     height:100%;
+    object-fit: fill;
     border-radius: 8px;
     mix-blend-mode: color-dodge;
     filter: saturate(2);
+    transform: translateX(60%);
 
 }
 

@@ -8,6 +8,8 @@ import carpenterPicWes from '../picture/pexels-thijs-van-der-weide-1094767.jpg'
 import Wood from '../picture/pexels-alfo-medeiros-14569101.jpg';
 import Trunk from '../picture/WoodenTrunkPage.png';
 import Footer from '../../components/footer/Footer';
+import Floor from '../picture/pexels-digital-buggu-576470.jpg';
+import WoodFibres from '../picture/WoodFibres.jpg';
 export default function Home() {
 
 
@@ -31,6 +33,11 @@ export default function Home() {
             <div className={styles.layoutcontainer}>
                 <div className={styles.infotext}>
                     
+                    <div className={styles.textwrapper}>
+                        
+                        <Image src={Floor} alt="" />
+                        <Image src={WoodFibres} alt="" />
+                    </div>
                     <div className={styles.textwrap}>
                         <Image src={Wood} alt="" />
                         <h2 className={styles.h2}>Unser Anspruch auf Detail
