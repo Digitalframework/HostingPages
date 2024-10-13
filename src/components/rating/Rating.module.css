@@ -1,0 +1,125 @@
+
+
+/* Rating container styling */
+.rating {
+  text-align: center;
+  margin-top: 120px;
+  position: relative;
+  width: 50%;
+  float: left;
+}
+
+/* Hidden class for opacity */
+.hidden {
+  opacity: 0;
+}
+
+/* Star styling */
+.star {
+  display: inline-block;
+  margin: 5px;
+  font-size: 30px;
+  color: whitesmoke;
+  position: relative;
+}
+
+/* Animate class for animation */
+.star.animate {
+  -webkit-animation: stretch-bounce 0.5s ease-in-out;
+}
+
+/* Hidden stars */
+.star.hidden {
+  opacity: 0;
+}
+
+/* Full star styling */
+.full:before {
+  font-family: fontAwesome;
+  display: inline-block;
+  content: "\f005"; /* Unicode for solid star */
+  position: relative;
+  float: right;
+  z-index: 2;
+}
+
+/* Half star styling */
+.half:before {
+  font-family: fontAwesome;
+  content: "\f089"; /* Unicode for half star */
+  position: absolute;
+  float: left;
+  z-index: 3;
+}
+
+/* Star color for rated stars */
+.starColour {
+  color: #ffd700;
+}
+
+/* Keyframe animation */
+@-webkit-keyframes stretch-bounce {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.5);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+  }
+  75% {
+    -webkit-transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+
+/* Selected star styling */
+.selected:before {
+  font-family: fontAwesome;
+  display: inline-block;
+  content: "\f005"; /* Unicode for solid star */
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Pulse animation for the selected star */
+.selected.pulse:before {
+  -webkit-transform: scale(3);
+  opacity: 0;
+}
+
+/* Animation class for selected stars */
+.selected.isAnimated:before {
+  transition: 1s ease-out;
+}
+
+/* Score display styling */
+.score {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  color: green;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+.scoreRating {
+  vertical-align: super;
+  top: -5px;
+  position: relative;
+  font-size: 150%;
+}
+
+.total {
+  vertical-align: sub;
+  top: 0px;
+  position: relative;
+  font-size: 100%;
+}
+

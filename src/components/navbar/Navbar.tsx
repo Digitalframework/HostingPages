@@ -7,13 +7,15 @@ export default function Navbar() {
     
     const [menue, setMenue] = useState(false)
 
+
+
     return (
     <div className={styles.wrapper}>  
             <nav className={styles.navbar} style={{width: menue? '40%':'100%',
-            height: menue? '130dvh':'17svh',position: menue? 'fixed':'absolute'}}>
+            height: menue? '130dvh':'10svh',position: menue? 'fixed':'absolute'}}>
                 <div className={styles.logo}>
                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width={'15svh'}  height={'15svh'}  viewBox="0 0 1000.000000 1000.000000"
+ width={'10svh'}  height={'10svh'}  viewBox="0 0 1000.000000 1000.000000"
  preserveAspectRatio="xMidYMid meet">
 
 <g transform="translate(0.000000,1000.000000) scale(0.100000,-0.100000)"
@@ -1163,7 +1165,7 @@ c12 -49 -79 -253 -148 -332 -23 -26 -38 -34 -57 -32 -24 3 -26 7 -25 49 0 35
                     <div className={styles.navlist} >
                         
                         <ul>
-                            <li ><Link href="/layout">Home</Link></li>
+                            <li ><Link href="/home">Home</Link></li>
                             <li ><Link href="/projects">Projekte</Link></li>
                             <li ><Link href="/aboutUs">ÜberUns</Link></li>
                             <li><Link href="#">Kontakt</Link></li>

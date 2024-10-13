@@ -1,0 +1,31 @@
+.sectiontitle {
+	font-size: 28px;
+	margin-bottom: 5%;
+	padding-bottom: 5%;
+	margin-left: 33%;
+	font-weight: 400;
+	display: inline-block;
+	position: relative;
+	text-align: 'center';
+}
+
+.customername {
+	font-size: 20px;
+	height: 100px;
+  	line-height: 120px;
+	color: '#fff';
+}
+
+.customerreview {
+	font-size: 16px;
+    height: 160px;
+	line-height: 160px;
+    color: '#fff';
+}
+
+.carouselfeedback {
+	font-weight: 400;
+	text-align: center;
+	background: '#364d79';
+	overflow: hidden;
+}
