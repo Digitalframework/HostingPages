@@ -10,7 +10,6 @@ export default function Rating() {
   const handleStarClick = (event: React.MouseEvent<HTMLDivElement>) => {
     const target = event.currentTarget;
     const selected = target.querySelector(`.${styles.selected}`);
-    console.log("selected " + target + selected)
     if (selected) {
       selected.classList.add(styles.isAnimated, styles.pulse);
       setTimeout(() => {
@@ -50,24 +49,20 @@ export default function Rating() {
   }
 
   const handleFullClick = (event: React.MouseEvent<HTMLDivElement>) => {
-    if (starClicked) {
-      console.log("full " + event.currentTarget)
-      setFullStarState(event.currentTarget);
-      const value = parseInt(event.currentTarget.dataset.value || "0");
-      setRating(value);
-      console.log("full " + rating)
-      handleStarClick()
-    }
+    
+    let target = event.currentTarget;
+    let element = target.parentElement as HTMLSpanElement;
+    setFullStarState(element);
+    const value = parseInt(target.dataset.value || "0");
+    setRating(value);
   };
 
   const handleHalfClick = (event: React.MouseEvent<HTMLSpanElement>) => {
-    if (starClicked) {
-      console.log("half " + event.currentTarget)
-      setHalfStarState(event.currentTarget);
-      const value = parseFloat(event.currentTarget.dataset.value || "0");
-      setRating(value);
-      console.log("half " + rating)
-    }
+    let target = event.currentTarget as HTMLSpanElement;
+    setHalfStarState(target);
+    const value = parseFloat(target.dataset.value || "0");
+    setRating(value);
+    
   };
 
   const handleFullHover = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -83,15 +78,11 @@ export default function Rating() {
   };
 
   const setHalfStarState = (target: HTMLSpanElement) => {
-    console.log("in halfstate" + target)
     target.classList.add(styles.starColour);
-    const prevSibling = target.previousElementSibling as HTMLSpanElement;
-    prevSibling?.classList.add(styles.starColour);
     updateStarState(target);
   }
 
   const setFullStarState = (target: HTMLSpanElement) => {
-    console.log("in fullstate" + target)
     target.classList.add(styles.starColour);
     const selected = target.parentElement?.querySelector(`.${styles.selected}`) as HTMLSpanElement;
     selected.classList.add(styles.starColour);
