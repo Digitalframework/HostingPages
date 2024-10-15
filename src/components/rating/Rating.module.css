@@ -24,23 +24,33 @@
 }
 
 /* Animate class for animation */
-.star.animate {
-  -webkit-animation: stretch-bounce 0.5s ease-in-out;
+.animate {
+  animation: stretchBounce 0.5s ease-in-out;
 }
 
 /* Hidden stars */
-.star.hidden {
+.starHidden {
+  display: inline-block;
+  margin: 5px;
+  font-size: 30px;
+  position: relative;
   opacity: 0;
 }
 
 /* Full star styling */
 .full:before {
   font-family: fontAwesome;
-  display: inline-block;
   content: "\f005"; /* Unicode for solid star */
-  position: relative;
   float: right;
-  z-index: 2;
+}
+
+.fullArea{
+  position: absolute;
+  float: right;
+  z-index: 4;
+  width: 50%;
+  height: 100%;
+  transform: translateX(15px);
 }
 
 /* Half star styling */
@@ -50,6 +60,7 @@
   position: absolute;
   float: left;
   z-index: 3;
+  width: 50%;
 }
 
 /* Star color for rated stars */
@@ -57,46 +68,44 @@
   color: #ffd700;
 }
 
-/* Keyframe animation */
-@-webkit-keyframes stretch-bounce {
+@keyframes stretchBounce {
+  /* Define your animation keyframes here */
   0% {
-    -webkit-transform: scale(1);
+    transform: scale(1);
   }
   25% {
-    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
   }
   50% {
-    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
   }
   75% {
-    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
   }
   100% {
-    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }
 
 /* Selected star styling */
-.selected:before {
+.selected::before {
   font-family: fontAwesome;
   display: inline-block;
-  content: "\f005"; /* Unicode for solid star */
+  content: "\f005";
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-transform: scale(1);
+  transform: scale(1);
   opacity: 1;
   z-index: 1;
 }
 
-/* Pulse animation for the selected star */
-.selected.pulse:before {
-  -webkit-transform: scale(3);
+.selected.pulse::before {
+  transform: scale(3);
   opacity: 0;
 }
 
-/* Animation class for selected stars */
-.selected.isAnimated:before {
+.selected.isAnimated::before {
   transition: 1s ease-out;
 }
 
