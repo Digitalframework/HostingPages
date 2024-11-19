@@ -2,11 +2,13 @@
 
 /* Rating container styling */
 .rating {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
   text-align: center;
-  margin-top: 120px;
   position: relative;
   width: 50%;
-  float: left;
 }
 
 /* Hidden class for opacity */

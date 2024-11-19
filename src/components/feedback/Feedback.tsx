@@ -1,5 +1,6 @@
-import { Carousel } from "antd";
+import { Card, Carousel } from "antd";
 import styles from './Feedback.module.css'
+import Rating from "../rating/Rating";
 
 type FeedbackProps = {
     clientname: String[];
@@ -12,23 +13,23 @@ type FeedbackProps = {
 export default function Feedback({ clientname, customerreview,rating }: FeedbackProps) {
 
     return (
-            <Carousel className={styles.carouselfeedback} autoplay={true}>
-                <div>
-                    <h3 className={styles.customername}> {clientname[0]}</h3>
+            <Carousel className={styles.carouselfeedback} autoplay={true} >
+                <Card bordered={false} title={clientname[0]} className={styles.reviewCard}>
                     <h3 className={styles.customerreview}>{customerreview[0]}</h3>
-                </div>
-                <div>
-                    <h3 className={styles.customername}> {clientname[1]}</h3>
+                    <Rating/>
+                </Card>
+                <Card bordered={false} title={clientname[1]} className={styles.reviewCard}>
                     <h3 className={styles.customerreview}>{customerreview[1]}</h3>
-                </div>
-                <div>
-                    <h3 className={styles.customername}> {clientname[2]}</h3>
+                    <Rating/>
+                </Card>
+                <Card bordered={false} title={clientname[2]} className={styles.reviewCard}>
                     <h3 className={styles.customerreview}>{customerreview[2]}</h3>
-                </div>
-                <div>
-                    <h3 className={styles.customername}> {clientname[3]}</h3>
+                    <Rating/>
+                </Card>
+                <Card bordered={false} title={clientname[3]} className={styles.reviewCard}>
                     <h3 className={styles.customerreview}>{customerreview[3]}</h3>
-                </div>
+                    <Rating/>
+                </Card>
             </Carousel>
 
     )

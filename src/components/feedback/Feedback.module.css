@@ -11,15 +11,13 @@
 
 .customername {
 	font-size: 20px;
-	height: 100px;
-  	line-height: 120px;
+	margin-bottom: 2%;
 	color: '#fff';
 }
 
 .customerreview {
 	font-size: 16px;
-    height: 160px;
-	line-height: 160px;
+	margin-bottom: 2%;
     color: '#fff';
 }
 
@@ -28,4 +26,9 @@
 	text-align: center;
 	background: '#364d79';
 	overflow: hidden;
+}
+
+.reviewCard {
+	margin-top: 5%;
+	margin-bottom: 5%;
 }

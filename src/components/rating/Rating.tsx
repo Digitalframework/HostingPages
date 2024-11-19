@@ -2,6 +2,12 @@ import styles from './Rating.module.css'
 import { useState } from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
+type RatingData = {
+  userRating: number,
+
+}
+
+
 export default function Rating() {
     
   const [starClicked, setStarClicked] = useState(false);
@@ -95,8 +101,8 @@ export default function Rating() {
   
   return (
     <div className={styles.rating}>
-      {[0,1, 2, 3, 4, 5].map((num) => (
-        <div className={num === 0 ? styles.starHidden : styles.star} key={num} onClick={handleStarClick}>
+      {[0,1, 2, 3, 4].map((num) => (
+        <div className={styles.star} key={num} onClick={handleStarClick}> {/*{num === 0 ? styles.starHidden : styles.star}*/}
           <span
             className={styles.full}
           >
@@ -115,12 +121,13 @@ export default function Rating() {
           <span className={styles.selected}/>
         </div>
       ))}
-
+      {/* 
       <div className={styles.score}>
         <span className={styles.scoreRating}>{rating.toFixed(1)}</span>
         <span>/</span>
         <span className={styles.total}>5</span>
       </div>
+      */}
     </div>
   );
 }

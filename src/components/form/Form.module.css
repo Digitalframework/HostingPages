@@ -1,6 +1,5 @@
 .formroot{
-	height: 800px;
-	flex: 1 2 600px;
+	flex: 1 2 calc(40% - 1rem);
 }
 
 .msform {

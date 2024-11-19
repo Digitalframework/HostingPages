@@ -1,0 +1,113 @@
+.hero {
+  background-color: gray;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.languageSelect, .headerLink {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.getInTouch {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.home {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.headerDash {
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  margin-right: 10px;
+}
+
+.content {
+  color: #fff;
+  padding: 0 20px;
+  margin-bottom: 100px;
+}
+
+.h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+}
+
+.ctaDash {
+  width: 40px;
+  height: 2px;
+  background-color: #fff;
+  margin-right: 10px;
+}
+
+.ctaText {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+#homeLink {
+  text-decoration: none;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.logo:hover path {
+  fill: black;
+  stroke: red;
+  stroke-width: 4;
+  stroke-dasharray: 5000;
+  stroke-dashoffset: 5000;
+  animation: draw 10s linear forwards infinite;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

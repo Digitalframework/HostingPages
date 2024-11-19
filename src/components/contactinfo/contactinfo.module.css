@@ -1,12 +1,14 @@
 .contactinfo {
-    width: 40%;
-    margin: 150px 0 0 5%;
+    flex: 1 1 calc(40% - 1rem);
     color: var(--main-text-color);    
 }
-
-.contactinfo div{
+.adressinfo{
+    margin-top: 42%;
+    
+}
+.adressinfo div{
     display: grid;
-    width: 350px;
+    margin: auto;
     grid-template-columns: fit-content(40%) fit-content(40%) 1fr;
     grid-gap: 30px;
   }
