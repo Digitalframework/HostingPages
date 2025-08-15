@@ -1,33 +1,48 @@
-import { FormWrapper } from './FormWrapper'
-import { useState } from 'react'
+import { FormWrapper } from "./FormWrapper";
+import { useState } from "react";
 
+type UserData = {
+  firstnameUF: string;
+  lastnameUF: string;
+  emailUF: string;
+};
 
-  type UserData = {
-    firstnameUF: string
-    lastnameUF: string
-    emailUF: string
-  }
-  
-  type UserFormProps = UserData & {
-    updateFields: (fields: Partial<UserData>) => void
-  }
-  
-  export function UserForm({
-    firstnameUF,
-    lastnameUF,
-    emailUF,
-    updateFields,
-  }: UserFormProps) {
+type UserFormProps = UserData & {
+  updateFields: (fields: Partial<UserData>) => void;
+};
 
-
-    
-    return (
-      <FormWrapper title="Kundeninfos">
-      <input type="text" name="firstname" placeholder="Vorname" required value={firstnameUF} 
-      onChange={e => updateFields({ firstnameUF: e.target.value })}/>
-      <input type="text" name="lastname" placeholder="Nachname" required value={lastnameUF}
-      onChange={e => updateFields({ lastnameUF: e.target.value })}/>
-      <input type="text" name="email" placeholder="Email" required value={emailUF}
-      onChange={e => updateFields({ emailUF: e.target.value })} />
-      </FormWrapper>)
-  }
+export function UserForm({
+  firstnameUF,
+  lastnameUF,
+  emailUF,
+  updateFields,
+}: UserFormProps) {
+  return (
+    <FormWrapper title="Kundeninfos">
+      <input
+        type="text"
+        name="firstname"
+        placeholder="Vorname"
+        required
+        value={firstnameUF}
+        onChange={(e) => updateFields({ firstnameUF: e.target.value })}
+      />
+      <input
+        type="text"
+        name="lastname"
+        placeholder="Nachname"
+        required
+        value={lastnameUF}
+        onChange={(e) => updateFields({ lastnameUF: e.target.value })}
+      />
+      <input
+        type="text"
+        name="email"
+        placeholder="Email"
+        required
+        value={emailUF}
+        onChange={(e) => updateFields({ emailUF: e.target.value })}
+      />
+    </FormWrapper>
+  );
+}

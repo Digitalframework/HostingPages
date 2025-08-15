@@ -1,12 +1,15 @@
-import styles from './Rating.module.css'
-import { useState } from 'react';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import styles from "./Rating.module.css";
+import { useState } from "react";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
-export default function Rating() {
-    
+type RatingProps = {
+  userRating: number;
+};
+
+export default function Rating({ userRating }: RatingProps) {
   const [starClicked, setStarClicked] = useState(false);
-  const [rating, setRating] = useState(0);
-  
+  const [rating, setRating] = useState(userRating);
+
   const handleStarClick = (event: React.MouseEvent<HTMLDivElement>) => {
     const target = event.currentTarget;
     const selected = target.querySelector(`${styles.selected}`);
@@ -17,54 +20,45 @@ export default function Rating() {
       }, 1000);
     }
     setStarClicked(true);
-  }
+  };
 
   const updateStarState = (target: HTMLSpanElement) => {
     const parent = target.parentElement as HTMLElement;
-    let sibling = parent.previousElementSibling as HTMLElement
-    
+    let sibling = parent.previousElementSibling as HTMLElement;
+
     while (sibling) {
       sibling.classList.add(`${styles.animate}`);
-      sibling.querySelector('span')?.classList.add(`${styles.starColour}`);
+      sibling.querySelector("span")?.classList.add(`${styles.starColour}`);
       sibling = sibling.previousElementSibling as HTMLElement;
     }
-    //sibling = target.nextElementSibling as HTMLElement;
     sibling = parent.nextElementSibling as HTMLElement;
     while (sibling) {
       sibling.classList.remove(`${styles.animate}`);
-      //sibling.querySelector('span')?.classList.remove(`${styles.starColour}`);
-      //sibling.querySelector('span')?.classList.remove(`${styles.starColour}`);
-      const spans = sibling.querySelectorAll('span');
-      
-      spans.forEach(span => {
-        span.classList.remove(styles.starColour); // Remove the class from both spans
+      const spans = sibling.querySelectorAll("span");
+
+      spans.forEach((span) => {
+        span.classList.remove(styles.starColour);
       });
-      
+
       sibling = sibling.nextElementSibling as HTMLElement;
     }
-    if (sibling == null){
-      
+    if (sibling == null) {
     }
-
-  }
+  };
 
   const handleFullClick = (event: React.MouseEvent<HTMLSpanElement>) => {
     if (starClicked) {
-      console.log("full " + event.currentTarget)
       setFullStarState(event.currentTarget);
       const value = parseInt(event.currentTarget.dataset.value || "0");
       setRating(value);
-      console.log("full " + rating)
     }
   };
 
   const handleHalfClick = (event: React.MouseEvent<HTMLSpanElement>) => {
     if (starClicked) {
-      console.log("half " + event.currentTarget)
       setHalfStarState(event.currentTarget);
       const value = parseFloat(event.currentTarget.dataset.value || "0");
       setRating(value);
-      console.log("half " + rating)
     }
   };
 
@@ -85,7 +79,7 @@ export default function Rating() {
     const prevSibling = target.previousElementSibling as HTMLSpanElement;
     prevSibling?.classList.add(`${styles.starColour}`);
     updateStarState(target);
-  }
+  };
 
   const setFullStarState = (target: HTMLSpanElement) => {
     target.classList.add(`${styles.starColour}`);
@@ -93,8 +87,8 @@ export default function Rating() {
     const prevSibling = target.previousElementSibling as HTMLSpanElement;
     prevSibling?.classList.remove(`${styles.starColour}`);
     updateStarState(target);
-  }
-  
+  };
+
   return (
     <div className={styles.rating}>
       {[1, 2, 3, 4, 5].map((num) => (

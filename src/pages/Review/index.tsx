@@ -8,7 +8,7 @@ export default function Review() {
     return (
         <div>
             <Navbar></Navbar>
-            <Rating></Rating>   
+            <Rating userRating={2}></Rating>   
             <Footer></Footer>
         </div>
     )

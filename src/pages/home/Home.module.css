@@ -1,5 +1,4 @@
 
-
 .pagewrapper{
     font-family:Georgia, 'Times New Roman', Times, serif; 
 }
@@ -27,7 +26,7 @@
     z-index: 1;
     font-size: 35px;
     text-align: center;
-    color: var(--main-text-color) ;
+    color: var(--main-text-color);
     transform: translateY(-60svh);
     margin-left: 35%;
     position: absolute;
@@ -36,7 +35,7 @@
 .hrcarousel {
     z-index: 1;
     width: 100%;
-    color: var(--main-text-color) ;
+    color: var(--main-text-color);
     position: absolute;
     justify-content: center;
 }
@@ -46,7 +45,7 @@
     text-align: center;
     line-height: 1.5;
     font-size: 25px;
-    color: var(--main-text-color) ;
+    color: var(--main-text-color);
     position: absolute;
     transform: translateY(-50svh);
     margin-left: 35%;
@@ -61,7 +60,7 @@
   
 .btn{
   padding: 15px 50px;
-  color: var(--main-text-color) ;
+  color: var(--main-text-color);
   font-family: sans-serif;
   text-transform: uppercase;
   text-align: center;
@@ -146,7 +145,6 @@
 
 .textwrapper{
     float: left;
-    border-style: dashed;
     position: relative;
     height: 70svh;
     width: 55%;
@@ -253,7 +251,7 @@
 
 .tilecontainer{
     width:100%;
-    height: 660px;
+    height: fit-content;
     background:#1A1F23;   
 }
 
@@ -261,8 +259,6 @@
     margin-left: 16%;
     width: 68%;
     height: 576px;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-    background:#6E6658;   
 }
 
 .backgroundcontainer{
@@ -311,9 +307,6 @@
     .picturecarousel{
         height: 40svh;
     }  
-    .tilecontainer{
-        height: 330px;
-    }
     .productinfo{
 
         height: 302px;

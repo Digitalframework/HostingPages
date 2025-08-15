@@ -3,12 +3,11 @@
 /* Rating container styling */
 .rating {
   text-align: center;
-  margin-top: 120px;
   position: relative;
   width: 50%;
-  float: left;
+  margin-bottom: 50px;
+	display: inline-block;
 }
-
 /* Hidden class for opacity */
 .hidden {
   opacity: 0;
