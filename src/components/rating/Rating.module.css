@@ -9,11 +9,8 @@
   text-align: center;
   position: relative;
   width: 50%;
-<<<<<<< HEAD
   margin-bottom: 50px;
 	display: inline-block;
-=======
->>>>>>> f6486415ab8c72a97dfa6ed0c6f41b45e2b70965
 }
 /* Hidden class for opacity */
 .hidden {
